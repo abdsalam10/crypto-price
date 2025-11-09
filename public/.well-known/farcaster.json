@@ -5,16 +5,16 @@
     "signature": ""
   },
   "baseBuilder": {
-    "ownerAddress": "0x"
+    "ownerAddress": "0xC28f866B01672f55313401a03fF56179a1496835"
   },
   "miniapp": {
     "version": "1",
     "name": "Crypto Tracker",
-    "homeUrl": "https://your-domain.com",
-    "iconUrl": "https://your-domain.com/icon.png",
-    "splashImageUrl": "https://your-domain.com/splash.png",
+    "homeUrl": "https://crypto-price-chi-ruby.vercel.app",
+    "iconUrl": "https://crypto-price-chi-ruby.vercel.app/icon.png",
+    "splashImageUrl": "https://crypto-price-chi-ruby.vercel.app/splash.png",
     "splashBackgroundColor": "#1a1a2e",
-    "webhookUrl": "https://your-domain.com/api/webhook",
+    "webhookUrl": "https://crypto-price-chi-ruby.vercel.app/api/webhook",
     "subtitle": "Track crypto prices in real-time",
     "description": "A CoinGecko-like cryptocurrency tracker for Farcaster. Track real-time prices, market caps, and trends for top cryptocurrencies on Base chain.",
     "screenshotUrls": [
@@ -23,11 +23,11 @@
     ],
     "primaryCategory": "finance",
     "tags": ["crypto", "finance", "tracking", "defi", "base"],
-    "heroImageUrl": "https://your-domain.com/hero.png",
+    "heroImageUrl": "https://crypto-price-chi-ruby.vercel.app/hero.png",
     "tagline": "Track crypto instantly",
     "ogTitle": "Crypto Tracker - Real-time Cryptocurrency Prices",
     "ogDescription": "Track top cryptocurrencies with real-time prices and market data on Base chain.",
-    "ogImageUrl": "https://your-domain.com/og-image.png",
+    "ogImageUrl": "https://crypto-price-chi-ruby.vercel.app/og-image.png",
     "noindex": true
   }
 }
