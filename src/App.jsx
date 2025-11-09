@@ -14,10 +14,28 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [walletAddress, setWalletAddress] = useState('');
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [sdkReady, setSdkReady] = useState(false);
 
   useEffect(() => {
     // Initialize Farcaster Mini App SDK - hide splash screen
-    sdk.actions.ready();
+    const initSDK = async () => {
+      try {
+        // Load context first to ensure SDK is ready
+        if (sdk.context) {
+          console.log('SDK Context:', sdk.context);
+        }
+        // Signal ready to hide splash screen
+        sdk.actions.ready();
+        setSdkReady(true);
+      } catch (error) {
+        console.error('SDK initialization error:', error);
+        // Still set ready even if context fails
+        sdk.actions.ready();
+        setSdkReady(true);
+      }
+    };
+    
+    initSDK();
   }, []);
 
   useEffect(() => {

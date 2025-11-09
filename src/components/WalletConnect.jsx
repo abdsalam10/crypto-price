@@ -1,19 +1,39 @@
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
+import { useEffect } from 'react';
 import './WalletConnect.css';
 
 function WalletConnect({ onWalletConnected }) {
   const { address, isConnected } = useAccount();
-  const { connect, connectors, isPending } = useConnect();
+  const { connect, connectors, isPending, error } = useConnect();
   const { disconnect } = useDisconnect();
 
+  // Debug: Log connector status
+  useEffect(() => {
+    console.log('Connectors available:', connectors);
+    console.log('Is connected:', isConnected);
+    console.log('Address:', address);
+    if (error) {
+      console.error('Connection error:', error);
+    }
+  }, [connectors, isConnected, address, error]);
+
   // Notify parent when wallet connects
-  if (isConnected && address && onWalletConnected) {
-    onWalletConnected(address);
-  }
+  useEffect(() => {
+    if (isConnected && address && onWalletConnected) {
+      onWalletConnected(address);
+    }
+  }, [isConnected, address, onWalletConnected]);
 
   const handleConnect = () => {
+    console.log('Attempting to connect with connector:', connectors[0]);
     if (connectors[0]) {
-      connect({ connector: connectors[0] });
+      try {
+        connect({ connector: connectors[0] });
+      } catch (err) {
+        console.error('Connect error:', err);
+      }
+    } else {
+      console.error('No connectors available');
     }
   };
 
@@ -42,7 +62,7 @@ function WalletConnect({ onWalletConnected }) {
       <button 
         className="connect-wallet-btn" 
         onClick={handleConnect}
-        disabled={isPending}
+        disabled={isPending || connectors.length === 0}
       >
         {isPending ? (
           <>
@@ -56,6 +76,8 @@ function WalletConnect({ onWalletConnected }) {
           </>
         )}
       </button>
+      {error && <p className="wallet-error">{error.message}</p>}
+      {connectors.length === 0 && <p className="wallet-error">No wallet connector available</p>}
     </div>
   );
 }
