@@ -15,7 +15,7 @@
     "splashImageUrl": "https://crypto-price-chi-ruby.vercel.app/splash.png",
     "splashBackgroundColor": "#1a1a2e",
     "webhookUrl": "https://crypto-price-chi-ruby.vercel.app/api/webhook",
-    "subtitle": "Track crypto prices in real-time",
+    "subtitle": "Real-time crypto prices",
     "description": "A CoinGecko-like cryptocurrency tracker for Farcaster. Track real-time prices, market caps, and trends for top cryptocurrencies on Base chain.",
     "screenshotUrls": [
       "https://your-domain.com/screenshot1.png",
@@ -25,7 +25,7 @@
     "tags": ["crypto", "finance", "tracking", "defi", "base"],
     "heroImageUrl": "https://crypto-price-chi-ruby.vercel.app/hero.png",
     "tagline": "Track crypto instantly",
-    "ogTitle": "Crypto Tracker - Real-time Cryptocurrency Prices",
+    "ogTitle": "Crypto Tracker - Live Prices",
     "ogDescription": "Track top cryptocurrencies with real-time prices and market data on Base chain.",
     "ogImageUrl": "https://crypto-price-chi-ruby.vercel.app/og-image.png",
     "noindex": true
