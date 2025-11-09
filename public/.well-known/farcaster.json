@@ -1,0 +1,33 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "baseBuilder": {
+    "ownerAddress": "0x"
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Crypto Tracker",
+    "homeUrl": "https://your-domain.com",
+    "iconUrl": "https://your-domain.com/icon.png",
+    "splashImageUrl": "https://your-domain.com/splash.png",
+    "splashBackgroundColor": "#1a1a2e",
+    "webhookUrl": "https://your-domain.com/api/webhook",
+    "subtitle": "Track crypto prices in real-time",
+    "description": "A CoinGecko-like cryptocurrency tracker for Farcaster. Track real-time prices, market caps, and trends for top cryptocurrencies on Base chain.",
+    "screenshotUrls": [
+      "https://your-domain.com/screenshot1.png",
+      "https://your-domain.com/screenshot2.png"
+    ],
+    "primaryCategory": "finance",
+    "tags": ["crypto", "finance", "tracking", "defi", "base"],
+    "heroImageUrl": "https://your-domain.com/hero.png",
+    "tagline": "Track crypto instantly",
+    "ogTitle": "Crypto Tracker - Real-time Cryptocurrency Prices",
+    "ogDescription": "Track top cryptocurrencies with real-time prices and market data on Base chain.",
+    "ogImageUrl": "https://your-domain.com/og-image.png",
+    "noindex": true
+  }
+}
