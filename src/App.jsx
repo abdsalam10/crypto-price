@@ -73,7 +73,7 @@ function App() {
 
   const handleWalletConnected = (address) => {
     setWalletAddress(address);
-    setShowPortfolio(true);
+    // Don't automatically switch to portfolio - stay on current view
   };
 
   return (
